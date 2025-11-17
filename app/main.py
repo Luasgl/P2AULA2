@@ -110,3 +110,7 @@ async def listar_usuarios():
         return usuarios
     finally:
         db.close()
+
+@app.get("/")
+def home():
+    return {"message": "Bem-vindo! O servidor está funcionando!"}
